@@ -14,12 +14,18 @@ export default {
         "primary-blue": "#0A37A9",
       },
       fontSize: {
-        xxs: "0.5rem",
+        xxs: "8px",
+        xss: "10px",
       },
       padding: {
         regular: "14px",
       },
-      
+      boxShadow: {
+        custom: "0px 6px 4px -2px rgba(0,0,0,0.19)",
+      },
+      fontWeight: {
+        regular: "400",
+      },
     },
   },
   plugins: [],

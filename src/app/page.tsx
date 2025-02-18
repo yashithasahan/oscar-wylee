@@ -1,9 +1,9 @@
-import { ProductImage } from "@/components/product_image/ProductImage";
+import { ProductSection } from "@/components/product_image/ProductSection";
 
 export default function Home() {
   return (
     <div>
-      <ProductImage></ProductImage>
+      <ProductSection></ProductSection>
     </div>
   );
 }
