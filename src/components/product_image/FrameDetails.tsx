@@ -22,7 +22,7 @@ export const FrameDetails = () => {
         </h3>
 
         {/* Frame Fit and Measurements Table */}
-        <div className="grid grid-cols-2 border border-black text-black font-semibold text-center divide-x md:divide-black max-w-sm mx-auto">
+        <div className="grid grid-cols-2 border border-black text-black font-semibold text-center divide-x md:divide-black  w-full">
           <div>
             <div className="p-3 font-bold">FRAME FIT</div>
             <div className="pb-3 font-normal">WIDE</div>
