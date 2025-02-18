@@ -5,17 +5,32 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-size-base: 16px;
+  --font-size-h2: 16px;
+  --font-weight-h2: 600;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
-body {
+/* body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+@layer base {
+  h2 {
+    @apply text-2xl font-semibold text-foreground;
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-h2);
+    margin-bottom: 0.15rem;
+    margin-top: 0.15rem;
+    line-height: 1;
+  
+  }
 }

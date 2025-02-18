@@ -11,7 +11,15 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "primary-blue": "#0A37A9",
       },
+      fontSize: {
+        xxs: "0.5rem",
+      },
+      padding: {
+        regular: "14px",
+      },
+      
     },
   },
   plugins: [],
