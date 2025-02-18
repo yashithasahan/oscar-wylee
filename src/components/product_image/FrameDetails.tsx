@@ -1,6 +1,6 @@
 export const FrameDetails = () => {
   return (
-    <div className="mt-12 w-full border relative border-black rounded-2xl p-6 flex gap-2 sm:gap-4 sm:flex-row flex-col justify-center items-center ">
+    <div className="mt-12 w-full border relative border-black rounded-2xl p-6 flex gap-2 md:gap-4 md:flex-row flex-col justify-center items-center ">
       {/* Title with line on both sides */}
       <div className="absolute right-0 left-0 top-0 -translate-y-1/2   flex items-center justify-center mb-4">
         <h2 className="mx-4 text-lg sm:text-3xl sm:text-nowrap font-bold text-black text-center bg-white px-2">

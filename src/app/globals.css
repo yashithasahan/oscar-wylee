@@ -24,6 +24,7 @@
 } */
 
 @layer base {
+  /* h2 Custom Styles */
   h2 {
     @apply text-2xl font-semibold text-foreground;
     font-size: var(--font-size-h2);
