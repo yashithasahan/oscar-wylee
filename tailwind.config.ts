@@ -14,7 +14,8 @@ export default {
         "primary-blue": "#0A37A9",
       },
       fontSize: {
-        xxs: "0.5rem",
+        xxs: "8px",
+        xss: "10px",
       },
       padding: {
         regular: "14px",

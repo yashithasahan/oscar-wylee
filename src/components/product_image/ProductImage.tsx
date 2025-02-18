@@ -53,7 +53,7 @@ export const ProductImage: React.FC = () => {
       <ColorPicker />
       {/* Purchase */}
       <PrimaryButton>Prescription</PrimaryButton>
-      <SecondaryButton>Book an Eye Test</SecondaryButton>
+      <SecondaryButton>Book an eye test</SecondaryButton>
       {/* Frame Details */}
       <FrameDetails />
     </div>
