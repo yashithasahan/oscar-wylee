@@ -40,9 +40,9 @@ const Header: React.FC = () => {
 
           {/* Logo */}
           <Image
+            height={16}
             src={Logo}
-            height={20}
-            alt="Oscar Wylee Logo w-auto"
+            alt="Oscar Wylee Logo w-auto flex "
             priority
           />
 
