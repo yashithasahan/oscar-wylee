@@ -39,7 +39,12 @@ const Header: React.FC = () => {
           </div>
 
           {/* Logo */}
-          <Image height={16} src={Logo} alt="Oscar Wylee Logo w-auto flex " />
+          <Image
+            height={16}
+            src={Logo}
+            alt="Oscar Wylee Logo w-auto flex "
+            priority
+          />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex flex-1 justify-center items-center gap-4 text-sm font-semibold">
