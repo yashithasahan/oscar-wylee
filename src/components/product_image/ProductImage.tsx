@@ -1,11 +1,12 @@
 "use client";
 import Glass from "@/public/products/marco_280-americano-45d-optical.jpg";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Image from "next/image";
 import { useState } from "react";
 import PrimaryButton from "../common/buttons/PrimaryButton";
 import SecondaryButton from "../common/buttons/SecondaryButton";
+import ZipLogo from "@/public/extra/zip_log.svg";
+import MagnifyingGlass from "@/public/Icons/magnifying_glass.svg";
 
 export const ProductImage: React.FC = () => {
   const dots = [0, 1, 2, 3, 4, 5]; // Number of dots
@@ -23,13 +24,18 @@ export const ProductImage: React.FC = () => {
       {/* Image */}
       <section className="relative">
         <Image
-          className="w-full h-auto"
+          className="w-full h-auto py-10"
           src={Glass}
           height={300}
           alt="oscar_wylee"
         />
-        <button className="absolute bottom-2 right-0 border-2 border-black rounded-lg px-4 py-1 text-sm ">
-          Zoom <FontAwesomeIcon icon={faMagnifyingGlass} />
+        <button className="absolute flex justify-center items-center gap-2 bg-gray-100  bottom-2 right-0 border-2 border-black rounded-lg px-4 py-1 text-sm font-semibold ">
+          Zoom
+          <Image
+            src={MagnifyingGlass}
+            alt="magnifying_glass"
+            className="h-4 w-min"
+          ></Image>
         </button>
       </section>
       {/* Dots Indicator */}
@@ -37,7 +43,7 @@ export const ProductImage: React.FC = () => {
         {dots.map((index) => (
           <span
             key={index}
-            className={`h-1 w-1 rounded-full transition-all duration-300 ${
+            className={`h-2 w-2 rounded-full transition-all duration-300 ${
               index === activeIndex ? "bg-black" : "bg-gray-300"
             }`}
           ></span>
@@ -71,17 +77,17 @@ export const ColorPicker = () => {
   return (
     <div className="flex flex-col items-start space-y-3 mb-4">
       {/* Selected Color Name */}
-      <h2 className="text-xs">
+      <h2 className="text-sm">
         <span className="text-black font-bold">Color:</span>{" "}
         <span className="text-gray-700 ">{selectedColor.name}</span>
       </h2>
 
       {/* Color Selection Grid */}
-      <div className="flex flex-wrap justify-start gap-4">
+      <div className="flex flex-wrap justify-start gap-6">
         {colors.map((color) => (
           <button
             key={color.name}
-            className={`w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all duration-300
+            className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-300
               ${
                 selectedColor.name === color.name
                   ? "border-black shadow-md scale-110"
@@ -90,7 +96,7 @@ export const ColorPicker = () => {
             onClick={() => setSelectedColor(color)}
           >
             <div
-              className="w-4 h-4 rounded-full"
+              className="w-6 h-6 rounded-full"
               style={{
                 backgroundColor: color.hex,
                 boxShadow:
@@ -105,17 +111,17 @@ export const ColorPicker = () => {
       {/* Price */}
       <div className="flex flex-col text-end border-t border-b border-gray-300 py-2 w-full justify-end">
         {/* Price */}
-        <h2 className="text-2xl font-bold text-black ">From $199.00</h2>
+        <p className="mb-0 text-2xl font-bold text-black ">From $199.00</p>
 
         {/* ZIP Pay Option */}
-        <p className="text-gray-700 mt-2">
+        <p className="mt-1 gap-1 text-gray-700 flex flex-row  text-end justify-end items-center">
           or ZIP it from <span className="font-bold text-black">$10/week</span>{" "}
           with
-          {/* <Image
-            src="/zip-logo.png"
+          <Image
+            src={ZipLogo}
             alt="ZIP"
-            className="inline-block h-4 ml-1"
-          /> */}
+            className="inline-block h-4 ml-1 w-min"
+          />
         </p>
       </div>
     </div>
@@ -133,7 +139,7 @@ export const FrameDetails = () => {
       </div>
 
       {/* Description */}
-      <p className="text-gray-700 text-center my-4">
+      <p className="text-gray-700 text-xl font-regular px-8 text-center my-4">
         A classic brow-line glasses, reimagined. Marco has spring hinges and an
         adjustable nose fit for maximum comfort (and style). Now available in
         small.
@@ -141,18 +147,18 @@ export const FrameDetails = () => {
 
       <div className="flex flex-col sm:gap-4">
         {/* Material */}
-        <h3 className="text-center font-bold text-black mb-4">
+        <h3 className="text-center font-bold text-xl text-black mb-4">
           Made from Acetate
         </h3>
 
         {/* Frame Fit and Measurements Table */}
         <div className="grid grid-cols-2 border border-black text-black font-semibold text-center divide-x divide-black">
           <div>
-            <div className="p-3">FRAME FIT</div>
+            <div className="p-3 font-bold">FRAME FIT</div>
             <div className="pb-3 font-normal">WIDE</div>
           </div>
           <div>
-            <div className="p-3">MEASUREMENTS</div>
+            <div className="p-3 font-bold">MEASUREMENTS</div>
 
             <div className="pb-3 font-normal ">56 - 19 - 148</div>
           </div>
