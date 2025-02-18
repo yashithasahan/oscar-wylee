@@ -69,8 +69,16 @@ const Header: React.FC = () => {
           </button>
           <div className="flex gap-2">
             {/* Icons */}
-            <CustomIcon icon={SearchIcon} alt="search"></CustomIcon>
-            <CustomIcon icon={UserIcon} alt="user"></CustomIcon>
+            <CustomIcon
+              icon={SearchIcon}
+              alt="search"
+              className="hidden md:block"
+            ></CustomIcon>
+            <CustomIcon
+              icon={UserIcon}
+              alt="user"
+              className="hidden md:block"
+            ></CustomIcon>
             {/* Shopping Cart */}
             <Cart />
           </div>
